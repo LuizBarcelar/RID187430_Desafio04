@@ -3,8 +3,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
     palette: {
         primary: {
-            main: '#FFFFFF'
-        }
+            main: '#FFFFFF',
+        },
     },
     typography: {
         fontFamily: "Poppins",
