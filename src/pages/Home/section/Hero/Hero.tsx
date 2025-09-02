@@ -32,7 +32,7 @@ const Hero = () => {
 
                         {/* Botão */}
                         <Grid size={{xs:12}}>
-                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' }, mt: 2}}>
+                            <Box sx={{ display: 'flex', paddingLeft:5 , justifyContent: { xs: 'center', md: 'flex-start' }, mt: 2}}>
                                 <StyledButton sx={{ width: '10rem',mr: { md: 4 } }}>
                                     saber mais
                                 </StyledButton>

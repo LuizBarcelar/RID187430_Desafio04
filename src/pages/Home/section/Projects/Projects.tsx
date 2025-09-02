@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Typography, Card, CardContent, CardActions, CardMedia } from '@mui/material';
 import StyledButton from '../../../../components/StyledButton';
 
+
 const projects = [
   {
     title: 'Projeto 1',
@@ -54,6 +55,12 @@ const Projects = () => {
                 overflow: 'hidden',
                 boxShadow: '0 8px 32px 12px rgba(0, 0, 0, 0.25)',
                 transition: 'all 0.3s ease-in-out',
+                mx: 'auto',
+                width: {
+                  xs: '90%',
+                  sm: '80%',
+                  md: '100%'
+                },
                 '&:hover': {
                     transform: 'translateY(-4px)',
                     boxShadow: '0 12px 48px 12px rgba(0, 0, 0, 0.45)'
@@ -61,7 +68,7 @@ const Projects = () => {
                 }}>
                 <CardMedia
                   component="img"
-                  height="400"
+                  height="350"
                   image={project.image}
                   alt={project.title}
                 />
@@ -71,7 +78,7 @@ const Projects = () => {
                   </Typography>
                   <Typography variant="body2" mt={6} >{project.description}</Typography>
                 </CardContent>
-                <CardActions sx={{ paddingBottom: 4,}}>
+                <CardActions sx={{ paddingBottom: 4, paddingLeft: 2}}>
                   <StyledButton >
                     clique aqui
                   </StyledButton>
