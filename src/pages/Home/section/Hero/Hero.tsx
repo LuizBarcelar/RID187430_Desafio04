@@ -1,6 +1,7 @@
 import { Box, Container, styled, Typography } from "@mui/material"
 import Grid from "@mui/material/Grid"
 import StyledButton from "../../../../components/StyledButton"
+import DownloadIcon from '@mui/icons-material/Download'
 
 const Hero = () => {
 
@@ -32,8 +33,17 @@ const Hero = () => {
 
                         {/* Botão */}
                         <Grid size={{xs:12}}>
-                            <Box sx={{ display: 'flex', paddingLeft:5 , justifyContent: { xs: 'center', md: 'flex-start' }, mt: 2}}>
-                                <StyledButton sx={{ width: '10rem',mr: { md: 4 } }}>
+                            <Box 
+                            component="a"
+                            color="inherit"
+                                href="/curriculo-luiz-barcelar.pdf"
+                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            sx={{ textDecoration: 'none', display: 'flex', paddingLeft:5 , justifyContent: { xs: 'center', md: 'flex-start' }, mt: 2}}>
+                                <StyledButton 
+                                startIcon={<DownloadIcon />}
+                                sx={{ width: '10rem',mr: { md: 4 } }}>
                                     saber mais
                                 </StyledButton>
                             </Box>
