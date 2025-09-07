@@ -18,22 +18,28 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 
-const NavBar = () => {
+interface NavBarProps {
+  darkMode: boolean;
+  toggleTheme: () => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ darkMode, toggleTheme }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    background: "#0F1624",
     color: theme.palette.primary.main,
   }));
 
   const navItems = ['Projects', 'Technologies', 'About me'];
 
+
   return (
     <>
-      <AppBar position="absolute" elevation={0}>
+      <AppBar position="absolute" elevation={0} sx={{ backgroundColor: 'background.default', color: 'text.primary'}}>
         <StyledToolbar>
           <Grid container alignItems="center" sx={{ width: '100%' }}>
             {/* Parte 1 - Navegação */}
@@ -72,6 +78,10 @@ const NavBar = () => {
                         gap: 1,
                         }}
                     >
+                        <IconButton onClick={toggleTheme} color="inherit" aria-label="Alternar tema">
+                          {darkMode ? <Brightness7 /> : <Brightness4 />}
+                        </IconButton>
+
                         <IconButton
                         color="inherit"
                         component="a"
@@ -91,7 +101,7 @@ const NavBar = () => {
                         aria-label="LinkedIn"
                         >
                         <LinkedInIcon />
-                        </IconButton>
+                        </IconButton>       
                     </Box>
                 )}
             </Grid>
@@ -139,6 +149,10 @@ const NavBar = () => {
                         borderTop: '1px solid #ccc',
                     }}
                 >
+                    <IconButton onClick={toggleTheme} color="inherit" aria-label="Alternar tema">
+                      {darkMode ? <Brightness7 /> : <Brightness4 />}
+                    </IconButton>
+                    
                     <IconButton
                         color="inherit"
                         component="a"

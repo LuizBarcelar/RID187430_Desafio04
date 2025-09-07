@@ -15,7 +15,7 @@ const Hero = () => {
 
     return (
         <>
-            <StyledHero>
+            <StyledHero sx={{ backgroundColor: 'background.default', color: 'text.primary'}}>
                 <Container maxWidth="lg">
                     <Grid container spacing={2}>
                         <Grid size={{xs:12, md:9}}>

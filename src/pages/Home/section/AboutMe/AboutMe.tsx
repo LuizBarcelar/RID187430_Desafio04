@@ -3,30 +3,31 @@ import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
 
 const timelineData = [
   {
-    year: '2018',
+    year: 'Sep 2024',
     description:
       'Comecei a estudar programação com foco em lógica, HTML e CSS.',
   },
   {
-    year: '2019',
+    year: 'Mar 2024',
     description:
       'Aprofundei meus estudos com JavaScript, comecei projetos pessoais.',
   },
   {
-    year: '2020',
+    year: 'Jan 2025',
     description:
-      'Aprendi React e Node.js, desenvolvendo aplicações full stack.',
+      'Aprendi React e TypeScript, desenvolvendo aplicações full stack.',
   },
   {
-    year: '2021',
+    year: 'Sep 2025',
     description:
       'Trabalhei em projetos reais, freelancers e colaborei com equipes.',
   },
 ];
 
 const AboutMe = () => {
+
   return (
-    <Box id="about" sx={{ backgroundColor: '#0F1624', py: 12, color: '#fff' }}>
+    <Box id="about" sx={{ backgroundColor: 'background.default', color: 'text.primary', py: 12 }}>
       <Container maxWidth="lg">
         <Typography variant="h1" color="primary" mb={15}>
           Sobre Mim
@@ -69,7 +70,7 @@ const AboutMe = () => {
                 position: 'relative'
               }}
             >
-              <Typography variant="h6" fontWeight="bold" mb={1}>
+              <Typography variant="h6" fontWeight="bold" mb={0.4}>
                 {item.year}
               </Typography>
               {/* Pontinho da timeline */}
@@ -89,15 +90,15 @@ const AboutMe = () => {
         </Box>
 
         {/* Contato */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} pt={10}>
           {/* Esquerda - Email e Telefone */}
           <Grid size={{ xs:12, md:8 }}>
             <Stack direction="row" spacing={2} alignItems="normal" flexWrap="wrap" gap={5}>
-              <Stack direction="column" alignItems="center" spacing={1}>
+              <Stack direction="column" alignItems="normal" spacing={1}>
                 <Typography>Meu contato:</Typography>
                 <Typography>(61) 9.9510-6609</Typography>
               </Stack>
-              <Stack direction="column" alignItems="center" spacing={1}>
+              <Stack direction="column" alignItems="normal" spacing={1}>
                 <Typography>Email:</Typography>
                 <Typography>luizbarcelar2014@gmail.com</Typography>
               </Stack>

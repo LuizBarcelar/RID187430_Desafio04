@@ -3,12 +3,16 @@ import NavBar from "../../components/NavBar/NavBar"
 import Projects from "./section/Projects/Projects"
 import AboutMe from "./section/AboutMe/AboutMe"
 
-const Home = () => {
+interface HomeProps {
+  darkMode: boolean;
+  toggleTheme: () => void;
+}
+const Home: React.FC<HomeProps> = ({ darkMode, toggleTheme }) => {
 
 
     return (
         <>
-            <NavBar />
+            <NavBar darkMode={darkMode} toggleTheme={toggleTheme}/>
             <Hero />
             <Projects />
             <AboutMe />

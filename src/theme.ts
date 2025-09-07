@@ -1,39 +1,62 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
-let theme = createTheme({
-    palette: {
-        primary: {
-            main: '#FFFFFF',
-        },
+const commonSettings = {
+  typography: {
+    fontFamily: "Poppins, sans-serif",
+    h1: {
+      fontSize: "4rem",
+      fontWeight: 600,
     },
-    typography: {
-        fontFamily: "Poppins",
-        h1: {
-            fontSize: "4 rem",
-            fontWeight: "600",
-            fontStyle: "SemiBold"
-        },
-
-        h2: {
-            fontSize: "2.5 rem",
-            fontWeight: "600",
-            fontStyle: "SemiBold"
-        },
-
-        h3: {
-            fontSize: "2 rem",
-            fontWeight: "600",
-            fontStyle: "SemiBold"
-        },
-
-        h4: {
-            fontSize: "1.5 rem",
-            fontWeight: "600",
-            fontStyle: "SemiBold"
-        }
+    h2: {
+      fontSize: "2.5rem",
+      fontWeight: 600,
     },
-})
+    h3: {
+      fontSize: "2rem",
+      fontWeight: 600,
+    },
+    h4: {
+      fontSize: "1.5rem",
+      fontWeight: 600,
+    },
+  },
+};
 
-theme = responsiveFontSizes(theme);
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#0F1624',
+    },
+    background: {
+      default: '#ffffff',
+      paper: '#f5f5f5',
+    },
+    text: {
+      primary: '#000000',
+    },
+  },
+  ...commonSettings,
+});
 
-export default theme;
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#fffff',
+    },
+    background: {
+      default: '#0F1624',
+      paper: '#1a1a2e',
+    },
+    text: {
+      primary: '#ffffff',
+    },
+  },
+  ...commonSettings,
+});
+
+export const themes = {
+  light: responsiveFontSizes(lightTheme),
+  dark: responsiveFontSizes(darkTheme),
+};

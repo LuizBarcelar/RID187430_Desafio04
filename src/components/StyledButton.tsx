@@ -1,5 +1,3 @@
-// StyledButton.tsx
-
 import { styled, Button, type ButtonProps } from "@mui/material";
 
 const StyledButton = styled((props: ButtonProps) => <Button {...props} />)(({ theme }) => ({

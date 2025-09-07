@@ -1,14 +1,16 @@
-import Home from "./pages/Home/Home"
+import Home from "./pages/Home/Home";
 
+;
 
-const App = () => {
-
-
-    return (
-        <>
-            <Home />
-        </>
-    )
+interface AppProps {
+  darkMode: boolean;
+  toggleTheme: () => void;
 }
 
-export default App
+const App: React.FC<AppProps> = ({ darkMode, toggleTheme }) => {
+  return (
+    <Home darkMode={darkMode} toggleTheme={toggleTheme} />
+  );
+};
+
+export default App;

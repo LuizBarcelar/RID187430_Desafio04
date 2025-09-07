@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Box id="projects" sx={{ backgroundColor: '#0F1624', py: 8 }}>
+    <Box id="projects" sx={{ backgroundColor: 'background.default', color: 'text.primary', py: 8 }}>
       <Container maxWidth="lg">
         <Typography variant="h1" color="primary" mb={15} gutterBottom>
           Projetos
@@ -47,8 +47,8 @@ const Projects = () => {
               <Card
               sx={{
                 backdropFilter: 'blur(10px)',
-                backgroundColor: '#0F1624',
-                color: '#fff',
+                backgroundColor: 'Background.default',
+                color: 'text.primary',
                 border: '2px solid #fff',
                 borderTopLeftRadius: '50px',
                 borderBottomRightRadius: '50px',
