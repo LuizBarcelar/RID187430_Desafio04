@@ -39,7 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({ darkMode, toggleTheme }) => {
 
   return (
     <>
-      <AppBar position="absolute" elevation={0} sx={{ backgroundColor: 'background.default', color: 'text.primary'}}>
+      <AppBar position="absolute" elevation={0} sx={{ backgroundColor: 'background.default', color: 'text.primary' }}>
         <StyledToolbar>
           <Grid container alignItems="center" sx={{ width: '100%' }}>
             {/* Parte 1 - Navegação */}
@@ -58,11 +58,19 @@ const NavBar: React.FC<NavBarProps> = ({ darkMode, toggleTheme }) => {
               ) : (
                 // Desktop: mostrar botões normalmente
                 <Box sx={{ display: 'flex', justifyContent: 'center', gap: 5 }}>
-                  {navItems.map((item) => (
-                    <Button key={item} color="inherit">
-                      {item}
-                    </Button>
-                  ))}
+                  {navItems.map((item) => {
+                    const anchor = item.toLowerCase().replace(/\s+/g, '');
+                    return (
+                      <Button
+                        key={item}
+                        color="inherit"
+                        href={`#${anchor}`}
+                        sx={{ textTransform: 'none' }}
+                      >
+                        {item}
+                      </Button>
+                    );
+                  })}
                 </Box>
               )}
             </Grid>

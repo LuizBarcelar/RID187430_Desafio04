@@ -27,7 +27,7 @@ const timelineData = [
 const AboutMe = () => {
 
   return (
-    <Box id="about" sx={{ backgroundColor: 'background.default', color: 'text.primary', py: 12 }}>
+    <Box id="aboutme" sx={{ backgroundColor: 'background.default', color: 'text.primary', py: 12 }}>
       <Container maxWidth="lg">
         <Typography variant="h1" color="primary" mb={15}>
           Sobre Mim
