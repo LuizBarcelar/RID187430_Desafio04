@@ -74,7 +74,7 @@ const AboutMe = () => {
               bottom: isSmallScreen ? 0 : 'auto',
               width: isSmallScreen ? '2px' : '100%',
               height: isSmallScreen ? '100%' : '2px',
-              backgroundColor: '#fff',
+              backgroundColor: theme.palette.text.primary,
               zIndex: 0,
               transform: isSmallScreen ? 'translateX(-50%)' : 'none',
             }}
@@ -104,7 +104,7 @@ const AboutMe = () => {
                   width: 14,
                   height: 14,
                   borderRadius: '50%',
-                  backgroundColor: '#fff',
+                  backgroundColor: theme.palette.text.primary,
                   mb: 3,
                 }}
               />
