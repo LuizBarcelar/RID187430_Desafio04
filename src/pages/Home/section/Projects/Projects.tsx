@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Typography, Card, CardContent, CardActions, CardMedia } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import StyledButton from '../../../../components/StyledButton';
 
 
@@ -34,6 +35,9 @@ const projects = [
 ];
 
 const Projects = () => {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === 'dark';
+
   return (
     <Box id="projects" sx={{ backgroundColor: 'background.default', color: 'text.primary', py: 8 }}>
       <Container maxWidth="lg">
@@ -47,24 +51,28 @@ const Projects = () => {
               <Card
               sx={{
                 backdropFilter: 'blur(10px)',
-                backgroundColor: 'Background.default',
+                backgroundColor: 'background.default',
                 color: 'text.primary',
                 border: '2px solid #fff',
                 borderTopLeftRadius: '50px',
                 borderBottomRightRadius: '50px',
                 overflow: 'hidden',
-                boxShadow: '0 8px 32px 12px rgba(0, 0, 0, 0.25)',
-                transition: 'all 0.3s ease-in-out',
                 mx: 'auto',
                 width: {
                   xs: '90%',
                   sm: '80%',
                   md: '100%'
                 },
-                '&:hover': {
+                boxShadow: isDarkMode
+                    ? '0 8px 32px 12px rgba(255, 255, 255, 0.15)'
+                    : '0 8px 32px 12px rgba(0, 0, 0, 0.25)',
+                  transition: 'all 0.3s ease-in-out',
+                  '&:hover': {
                     transform: 'translateY(-4px)',
-                    boxShadow: '0 12px 48px 12px rgba(0, 0, 0, 0.45)'
-                },
+                    boxShadow: isDarkMode
+                      ? '0 12px 48px 12px rgba(255, 255, 255, 0.25)'
+                      : '0 12px 48px 12px rgba(0, 0, 0, 0.45)',
+                  },
                 }}>
                 <CardMedia
                   component="img"
