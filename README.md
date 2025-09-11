@@ -1,3 +1,7 @@
+Trabalho de TypeScript
+
+Link do site disponibilizado: https://luizbarcelar.netlify.app/
+
 # 💼 Portfólio Pessoal – Luiz Barcelar
 
 Este é meu portfólio profissional desenvolvido com **React** e **Vite**, criado para apresentar meus projetos, habilidades e experiências de forma moderna e interativa.
