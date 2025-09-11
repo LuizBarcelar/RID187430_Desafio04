@@ -1,3 +1,17 @@
+# 💼 Portfólio Pessoal – Luiz Barcelar
+
+Este é meu portfólio profissional desenvolvido com **React** e **Vite**, criado para apresentar meus projetos, habilidades e experiências de forma moderna e interativa.
+
+O site inclui funcionalidades como **troca de tema** (claro/escuro) e link para minha principais plataformas e um botão personalizado com acesso ao meu currículo.
+
+---
+
+## 📌 Template escolhido
+
+**Template 02 - Página Web Interativa com React, TypeScript e Vite**
+
+> Optei pelo **Template 02** por sua estrutura otimizada para interfaces modernas e dinâmicas, com foco em performance e interatividade — ideal para um portfólio profissional com suporte na troca de tema.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
